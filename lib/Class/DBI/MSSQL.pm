@@ -1,10 +1,10 @@
-package Class::DBI::MSSQL;
-our $VERSION = '0.12';
-
 use strict;
 use warnings;
 
+package Class::DBI::MSSQL;
 use base qw(Class::DBI);
+
+our $VERSION = '0.121';
 
 =head1 NAME
 
@@ -12,7 +12,7 @@ Class::DBI::MSSQL - Class::DBI for MSSQL
 
 =head1 VERSION
 
-version 0.12
+version 0.121
 
  $Id: MSSQL.pm,v 1.10 2004/11/01 12:48:34 rsignes Exp $
 
@@ -210,8 +210,8 @@ C<set_up_table> and C<column_type> from James O'Sullivan.
 
 =head1 COPYRIGHT
 
-(C) 2004, Ricardo SIGNES.  Class::DBI::MSSQL is available under the same terms
-as Perl itself.
+(C) 2004-2006, Ricardo SIGNES.  Class::DBI::MSSQL is available under the same
+terms as Perl itself.
 
 =cut
 
