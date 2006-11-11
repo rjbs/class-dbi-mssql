@@ -14,7 +14,7 @@ Class::DBI::MSSQL - Class::DBI for MSSQL
 
 version 0.122
 
- $Id: MSSQL.pm,v 1.10 2004/11/01 12:48:34 rsignes Exp $
+ $Id$
 
 =head1 SYNOPSIS
 
