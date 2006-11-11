@@ -4,7 +4,7 @@ use warnings;
 package Class::DBI::MSSQL;
 use base qw(Class::DBI);
 
-our $VERSION = '0.121';
+our $VERSION = '0.122';
 
 =head1 NAME
 
@@ -12,7 +12,7 @@ Class::DBI::MSSQL - Class::DBI for MSSQL
 
 =head1 VERSION
 
-version 0.121
+version 0.122
 
  $Id: MSSQL.pm,v 1.10 2004/11/01 12:48:34 rsignes Exp $
 
@@ -88,7 +88,7 @@ and all other columns as Essential.
 
 =cut
 
-__PACKAGE__->set_sql(desc_table => <<SQL);
+__PACKAGE__->set_sql(desc_table => <<'SQL');
 	SELECT col.table_name, col.column_name, col.data_type, ccu.constraint_name
 	FROM information_schema.columns col
 	LEFT JOIN information_schema.constraint_column_usage ccu
@@ -133,7 +133,7 @@ sub _column_info {
 
 sub column_type {
 	my $class = shift;
-	my $col = shift or die "Need a column for column_type";
+	my $col = shift or Carp::croak "Need a column for column_type";
 	return $class->_column_info->{$col}->{data_type};
 }
 
